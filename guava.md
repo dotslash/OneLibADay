@@ -37,3 +37,89 @@ The six core functions are
 3. `checkState(boolean)`	Checks some state of the object `IllegalStateException`
 4. `checkElementIndex(int index, int size), checkPositionIndex(int index, int size)` Check that index is a valid element index into a list, string, or array with the specified size. An element index may range from 0 inclusive to size exclusive, inclusive respectively. You don't pass the list, string, or array directly; you just pass its size. `IndexOutOfBoundsException`
 5. `checkPositionIndexes(int start, int end, int size)` Same as above, but for the range `[start,end)` 
+
+###Common object methods and Ordering
+Guava provides a convinient way of defining hashCode, toString , compareTo functions. Go through the toString, compareTo functions of the Person class. Comparision chain is really a handy tool for defining compareTo funciton. The functions I found useful in Ordering are reverse, nullsFirst, nullsLast. If not for these functions this is not a great improvement over Comparable .
+
+Some utils for equals are also provided. I did not find it useful.Dont try to test Person class for Sets because equals function is not defined
+```java
+import com.google.common.base.Function;
+import com.google.common.base.Objects;
+import com.google.common.collect.ComparisonChain;
+import com.google.common.collect.Ordering;
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+class Person implements Comparable<Person> {
+    public final String lastName;
+    public final String firstName;
+    public final int zipCode;
+
+    public Person(String lastName, String firstName, int zipCode) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.zipCode = zipCode;
+    }
+
+    public int compareTo(Person that) {
+        //compare function does not expect null values
+        //if null values are expected then use a comparator
+        return ComparisonChain.start()
+                .compare(this.lastName, that.lastName)
+                .compare(this.firstName, that.firstName, Ordering.natural().nullsFirst().reverse())
+                .compare(this.zipCode, that.zipCode)
+                .result();
+    }
+    public static Ordering<Person> orderingByArea(){
+        Ordering<Person> byLengthOrdering = Ordering.natural().nullsFirst().onResultOf(new Function<Person, Integer>() {
+            @Override
+            public Integer apply(Person input) {
+                return input.zipCode;
+            }
+        });
+        return byLengthOrdering;
+    }
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this)
+                .add("lastName", lastName)
+                .add("firstName", firstName)
+                .addValue(zipCode) //avoid using addValue, give it meaningful name as for lastName/firstName
+                .toString();
+    }
+
+
+    @Override
+    public int hashCode(){
+        return Objects.hashCode(lastName, firstName, zipCode);
+    }
+
+}
+
+public class GuavaOrdering {
+    public static void main(String[] args) {
+        final Person p1 = new Person("Sai Teja", "Suram", 500072);
+        final Person p2 = new Person("Random1", "Random2", 500071);
+        final Person noFirstName = new Person("Sai", null, 1000000);
+
+        ArrayList<Person> list = new ArrayList<Person>(){{
+            add(p1);
+            add(p2);
+            add(noFirstName);
+        }};
+        Collections.sort(list);
+        System.out.println(list);
+        Collections.sort(list, Person.orderingByArea());
+        System.out.println(list);
+    }
+
+}
+
+```
+And the output would be
+```java
+[Person{lastName=Random1, firstName=Random2, 500071}, Person{lastName=Sai, firstName=null, 1000000}, Person{lastName=Sai Teja, firstName=Suram, 500072}]
+[Person{lastName=Random1, firstName=Random2, 500071}, Person{lastName=Sai Teja, firstName=Suram, 500072}, Person{lastName=Sai, firstName=null, 1000000}]
+
+```
