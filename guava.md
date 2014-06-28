@@ -9,7 +9,7 @@ This post covers the useful non complex utils provided by guava. Most of the con
   + New collection types, for use cases that the JDK collections don't address as well as they could: multisets, multimaps, tables, bidirectional maps, and more.
 
 1. `Strings`: A few extremely useful string utilities: splitting, joining, padding, and more.
-2. `Ranges`: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete.
+2. `Ranges`: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete. (trivial stuff; not covered in this)
 3. `Hashing`: Tools for more sophisticated hashes than what's provided by Object.hashCode(), including Bloom filters.
 
 ###The ones that seemed complex
@@ -184,7 +184,9 @@ String noControl = CharMatcher.JAVA_ISO_CONTROL.removeFrom(string); // remove co
 String theDigits = CharMatcher.DIGIT.retainFrom(string); // only the digits
 ```
 **CharSets**  
-Provodes reference to standard references to CharSet implementations. Example ```Charsets.UTF_8```
+Provides reference to standard references to CharSet implementations. Example ```Charsets.UTF_8```
+
 **CaseFormat**  
-Conert from one case convention to other.
+Convert from one case convention to other.
+
 ```CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, "CONSTANT_NAME")); // returns "constantName"```
