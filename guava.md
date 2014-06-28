@@ -6,9 +6,8 @@ This post covers the useful non complex utils provided by guava. Most of the con
 2. `Ordering`: Guava's powerful "fluent Comparator" class.
 1. Collections: Guava's extensions to the JDK collections ecosystem. These are some of the most mature and popular parts of Guava.
   + `Immutable collections`, for defensive programming, constant collections, and improved efficiency.
-  + New collection types, for use cases that the JDK collections don't address as well as they could: multisets, multimaps, tables, bidirectional maps, and more.
-  + Powerful collection utilities, for common operations not provided in java.util.Collections.
-  + Extension utilities: writing a Collection decorator? Implementing Iterator? We can make that easier.
+  + New collection types, for use cases that the JDK collections don't address as well as they could: multisets, multimaps, tables, bidirectional maps, and more. (fairly obvious stuff; not covered)
+
 1. `Strings`: A few extremely useful string utilities: splitting, joining, padding, and more.
 2. `Ranges`: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete.
 3. `Hashing`: Tools for more sophisticated hashes than what's provided by Object.hashCode(), including Bloom filters.
@@ -17,6 +16,9 @@ This post covers the useful non complex utils provided by guava. Most of the con
 1. `Reflection`: Guava utilities for Java's reflective capabilities.
 2. `EventBus`: Publish-subscribe-style communication between components without requiring the components to explicitly register with one another.
 3. `Concurrency`: Powerful, simple abstractions to make it easier to write correct concurrent code.
+4. `Collections`
+  + Powerful collection utilities, for common operations not provided in java.util.Collections.
+  + Extension utilities: writing a Collection decorator? Implementing Iterator? We can make that easier.
 
 ###Preconditions
 There are primarily 6 functions and 3 variants for each of these 6 functions
