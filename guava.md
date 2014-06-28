@@ -159,3 +159,32 @@ Apart from the standard ones, the interesting collections are
 * Table : 2-d map
 * RangeSet : Set of guava custom Range class objects
 * ClassToInstanceMap : Im too noob to understand its awesomeness (if any)
+
+###String Utils
+**Joiner and splitter**
+```java
+//splitter
+Joiner joiner = Joiner.on("; ").skipNulls(); 
+joiner.join("Harry", null, "Ron", "Hermione");
+joiner.join(Arrays.asList(1, 5, 7));
+
+//splitter
+Splitter.on('-') //on can take string/char/regExp or splitter.fixedLength can be used
+       .trimResults() //remove white spaces, accepts charmatcher also, which removes all matching chars
+       .omitEmptyStrings() //excluse empty strings
+       .limit(2) //stops after getting 3 tokens
+       .split("foo--bar--   qux"); 
+```
+A note about joiner and splitter is that, they are immutable. So each time an operation is applied new Joiner is obtained and the order does not matter.
+
+**CharMatcher**
+CharMatcher can be seen as a set of characters. The class provides some standard static charmatcher instances by default. One can also create new instances. The instances can be used as below.
+```java
+String noControl = CharMatcher.JAVA_ISO_CONTROL.removeFrom(string); // remove control characters
+String theDigits = CharMatcher.DIGIT.retainFrom(string); // only the digits
+```
+**CharSets**
+Provodes reference to standard references to CharSet implementations. Example ```Charsets.UTF_8```
+**CaseFormat**
+Conert from one case convention to other.
+```CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, "CONSTANT_NAME")); // returns "constantName"```
