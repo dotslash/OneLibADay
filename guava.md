@@ -67,12 +67,14 @@ class Person implements Comparable<Person> {
         //if null values are expected then use a comparator
         return ComparisonChain.start()
                 .compare(this.lastName, that.lastName)
-                .compare(this.firstName, that.firstName, Ordering.natural().nullsFirst().reverse())
+                .compare(this.firstName, that.firstName, 
+                        Ordering.natural().nullsFirst().reverse())
                 .compare(this.zipCode, that.zipCode)
                 .result();
     }
     public static Ordering<Person> orderingByArea(){
-        Ordering<Person> byLengthOrdering = Ordering.natural().nullsFirst().onResultOf(new Function<Person, Integer>() {
+        Ordering<Person> byLengthOrdering = Ordering.natural().
+                nullsFirst().onResultOf(new Function<Person, Integer>() {
             @Override
             public Integer apply(Person input) {
                 return input.zipCode;
@@ -82,10 +84,11 @@ class Person implements Comparable<Person> {
     }
     @Override
     public String toString() {
+        //avoid using addValue, give it meaningful name as for lastName/firstName
         return Objects.toStringHelper(this)
-                .add("lastName", lastName)
-                .add("firstName", firstName)
-                .addValue(zipCode) //avoid using addValue, give it meaningful name as for lastName/firstName
+                .add("ln", lastName)
+                .add("fn", firstName)
+                .addValue(zipCode)
                 .toString();
     }
 
@@ -119,7 +122,8 @@ public class GuavaOrdering {
 ```
 And the output would be
 ```java
-[Person{lastName=Random1, firstName=Random2, 500071}, Person{lastName=Sai, firstName=null, 1000000}, Person{lastName=Sai Teja, firstName=Suram, 500072}]
-[Person{lastName=Random1, firstName=Random2, 500071}, Person{lastName=Sai Teja, firstName=Suram, 500072}, Person{lastName=Sai, firstName=null, 1000000}]
+[Person{ln=Rand, fn=Rand, 500071}, Person{ln=Sai, fn=Suram, 500072}, Person{ln=Sai, fn=null, 1000000}]
+[Person{ln=Rand, fn=Rand, 500071}, Person{ln=Sai, fn=Suram, 500072}, Person{ln=Sai, fn=null, 1000000}]
+
 
 ```
