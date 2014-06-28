@@ -125,3 +125,26 @@ And the output would be
 [Person{ln=Rand, fn=Rand, 500071}, Person{ln=Sai, fn=Suram, 500072}, Person{ln=Sai, fn=null, 1000000}]
 [Person{ln=Rand, fn=Rand, 500071}, Person{ln=Sai, fn=Suram, 500072}, Person{ln=Sai, fn=null, 1000000}]
 ```
+###Immutable Collections
+Most of the java Collection are mutable, there is no easy way to ensure immutablity, once the collection is ready, Guava provides immutable collections
+
+Each of these collections hava a mutable builder subclass. Once all the elements are added into the builder, calling build will return immutable the corresponding collection.
+```java
+//using builder
+ImmutableMap.Builder<Integer,String> builder = new ImmutableMap.Builder<Integer, String>();
+builder.put(1, "1");
+builder.put(2,"2");
+ImmutableMap<Integer, String> build = builder.build();
+
+//create from existing collection
+HashSet<Integer> s = new HashSet<Integer>(){{
+    add(1); add(2);
+}};
+ImmutableSet<Integer> immutableSet = ImmutableSet.copyOf(s);
+```
+Apart from this each of these collections have some verbose functions (more syntactic sugar). 
+Example : If the set is of known elements one can do this
+```java
+public static final ImmutableSet<String> COLOR_NAMES = ImmutableSet.of("red","orange");
+```
+List of immutable collections available are ImmutableCollection, ImmutableList, ImmutableSet, ImmutableSortedSet, ImmutableMap, ImmutableSortedMap, ImmutableMultiset, ImmutableSortedMultiset, ImmutableMultimap, ImmutableListMultimap, ImmutableSetMultimap, ImmutableBiMap, ImmutableClassToInstanceMap, ImmutableTable
