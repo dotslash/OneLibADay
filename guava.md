@@ -1,5 +1,5 @@
 ##`Guava: Google Core Libraries for Java 1.6+`
-This post covers the useful non complex utils provided by guava
+This post covers the useful non complex utils provided by guava. Most of the content is copy-pasted from guava getting started guide
 ###Useful and not-so-complex utils
 1. `Preconditions`: Test preconditions for your methods more easily.
 2. `Common object methods`: Simplify implementing Object methods, like hashCode() and toString().
