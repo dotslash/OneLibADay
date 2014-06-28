@@ -29,3 +29,10 @@ checkArgument(i >= 0)
 checkArgument(i >= 0, "Argument was %s but expected nonnegative", i);
 checkArgument(i < j, "Expected i < j, but %s > %s", i, j);
 ```
+
+The six core functions are
+1. `checkArgument(boolean)`	Checks that the boolean is true. throws	`IllegalArgumentException`
+2. `checkNotNull(T)` throws	`NullPointerException`
+3. `checkState(boolean)`	Checks some state of the object `IllegalStateException`
+4. `checkElementIndex(int index, int size), checkPositionIndex(int index, int size)` Check that index is a valid element index into a list, string, or array with the specified size. An element index may range from 0 inclusive to size exclusive, inclusive respectively. You don't pass the list, string, or array directly; you just pass its size. `IndexOutOfBoundsException`
+5. `checkPositionIndexes(int start, int end, int size)` Same as above, but for the range `[start,end)` 
