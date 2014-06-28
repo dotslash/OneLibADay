@@ -102,8 +102,8 @@ class Person implements Comparable<Person> {
 
 public class GuavaOrdering {
     public static void main(String[] args) {
-        final Person p1 = new Person("Sai Teja", "Suram", 500072);
-        final Person p2 = new Person("Random1", "Random2", 500071);
+        final Person p1 = new Person("Sai", "Suram", 500072);
+        final Person p2 = new Person("Rand", "Rand", 500071);
         final Person noFirstName = new Person("Sai", null, 1000000);
 
         ArrayList<Person> list = new ArrayList<Person>(){{
@@ -124,6 +124,4 @@ And the output would be
 ```java
 [Person{ln=Rand, fn=Rand, 500071}, Person{ln=Sai, fn=Suram, 500072}, Person{ln=Sai, fn=null, 1000000}]
 [Person{ln=Rand, fn=Rand, 500071}, Person{ln=Sai, fn=Suram, 500072}, Person{ln=Sai, fn=null, 1000000}]
-
-
 ```
