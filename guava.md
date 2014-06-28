@@ -183,8 +183,8 @@ CharMatcher can be seen as a set of characters. The class provides some standard
 String noControl = CharMatcher.JAVA_ISO_CONTROL.removeFrom(string); // remove control characters
 String theDigits = CharMatcher.DIGIT.retainFrom(string); // only the digits
 ```
-**CharSets**
+**CharSets**  
 Provodes reference to standard references to CharSet implementations. Example ```Charsets.UTF_8```
-**CaseFormat**
+**CaseFormat**  
 Conert from one case convention to other.
 ```CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, "CONSTANT_NAME")); // returns "constantName"```
