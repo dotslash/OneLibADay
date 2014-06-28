@@ -6,7 +6,7 @@ This post covers the useful non complex utils provided by guava. Most of the con
 2. `Ordering`: Guava's powerful "fluent Comparator" class.
 1. Collections: Guava's extensions to the JDK collections ecosystem. These are some of the most mature and popular parts of Guava.
   + `Immutable collections`, for defensive programming, constant collections, and improved efficiency.
-  + New collection types, for use cases that the JDK collections don't address as well as they could: multisets, multimaps, tables, bidirectional maps, and more. (fairly obvious stuff; not covered)
+  + New collection types, for use cases that the JDK collections don't address as well as they could: multisets, multimaps, tables, bidirectional maps, and more.
 
 1. `Strings`: A few extremely useful string utilities: splitting, joining, padding, and more.
 2. `Ranges`: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete.
@@ -150,3 +150,12 @@ Example : If the set is of known elements one can do this
 public static final ImmutableSet<String> COLOR_NAMES = ImmutableSet.of("red","orange");
 ```
 List of immutable collections available are ImmutableCollection, ImmutableList, ImmutableSet, ImmutableSortedSet, ImmutableMap, ImmutableSortedMap, ImmutableMultiset, ImmutableSortedMultiset, ImmutableMultimap, ImmutableListMultimap, ImmutableSetMultimap, ImmutableBiMap, ImmutableClassToInstanceMap, ImmutableTable
+
+###new Collection types
+Apart from the standard ones, the interesting collections are
+* MultiSet 
+* MultiMap : each key can have multiple values. can interate over values of a key
+* BiMap : two way map
+* Table : 2-d map
+* RangeSet : Set of guava custom Range class objects
+* ClassToInstanceMap : Im too noob to understand its awesomeness (if any)
