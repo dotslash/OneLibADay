@@ -190,3 +190,16 @@ Provides reference to standard references to CharSet implementations. Example ``
 Convert from one case convention to other.
 
 ```CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, "CONSTANT_NAME")); // returns "constantName"```
+
+###Hashing
+If objects.hashCode is not enough for you and you need control on the hasing algorithm, this might be of help. (Example below)
+```java
+HashFunction hf = Hashing.md5(); //Hashing has all major hashing functions
+HashCode hc = hf.newHasher() //creates a Hasher into which data can be added
+       .putLong(id)
+       .putString(name, Charsets.UTF_8)
+       .putObject(person, personFunnel)
+       .hash(); //now the hashcode is ready
+```
+We get a HashCode object from which we can get int hashcode or long hashcode (if there are enough bits). Apart from these classes there are other helper classes related to Hashing.
+Funnel, BloomFilter are other interesting hash related classes.
