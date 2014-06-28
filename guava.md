@@ -31,6 +31,7 @@ checkArgument(i < j, "Expected i < j, but %s > %s", i, j);
 ```
 
 The six core functions are
+
 1. `checkArgument(boolean)`	Checks that the boolean is true. throws	`IllegalArgumentException`
 2. `checkNotNull(T)` throws	`NullPointerException`
 3. `checkState(boolean)`	Checks some state of the object `IllegalStateException`
