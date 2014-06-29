@@ -1,7 +1,7 @@
 #[GNU Trove](http://trove4j.sourceforge.net/html/overview.html)
-1. Maps between primitivies and Objects, Objects and primitives
-2. Faster Maps and Sets 
-3. Utils for Maps, Sets
+1. [Maps between primitivies and Objects, Objects and primitives](https://github.com/dotslash/OneLibADay/blob/master/trove.md#primitive-collections)
+2. [Faster Maps and Sets](https://github.com/dotslash/OneLibADay/blob/master/trove.md#faster-maps-and-sets)
+3. [Utils for Maps, Sets](https://github.com/dotslash/OneLibADay/blob/master/trove.md#utils-for-maps-sets)
 
 ###Primitive Collections
 Java Collections are inefficient for primitives as they do unnecessary conversions between primitives and their Object coutner parts. Grove provides Maps, Sets, Lists which use primitives. For Sets and Maps only hashed collections are provided.
