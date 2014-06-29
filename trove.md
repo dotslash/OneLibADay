@@ -15,7 +15,7 @@ The usage of these collections is pretty same as of normal maps and sets. These 
 
 ###Faster Maps and Sets
 The standard java collection's Implementation of Maps and Sets are backed by Maps. That means a TreeSet is actually a map internally.
-Java Maps have an inefficiency. To support the entrySet, keySet functionality, the collections implementations do something more and make them inefficient. Trove Maps and Sets do have this fucntionality. As long as entrySet is not called Trove collections will be significantly better than Java collections. [Im not sure about the details](#). Instead the ```forEachKey``` ```forEachEntry``` ```forEachValue``` functions should cover most of the use cases
+Java Maps have an inefficiency. To support the entrySet, keySet functionality, the collections implementations do something more and make them inefficient. Trove Maps and Sets do have this fucntionality. As long as entrySet is not called Trove collections will be significantly better than Java collections. [details : issue #1](https://github.com/dotslash/OneLibADay/issues/1). Instead the ```forEachKey``` ```forEachEntry``` ```forEachValue``` functions should cover most of the use cases
 
 * ```THashMap<K,V>```
 * ```THashSet<T>```
