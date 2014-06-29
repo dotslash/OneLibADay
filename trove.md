@@ -51,3 +51,7 @@ final TObjectIntCustomHashMap<String[]> map =
     }
 });
 ```
+
+###Sources
+* http://java-performance.info/
+* http://trove4j.sourceforge.net/javadocs/
