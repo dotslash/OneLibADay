@@ -6,4 +6,4 @@ Learn and document about one library a day
 * 28 Jun 2014 : [Google Guava](https://github.com/dotslash/OneLibADay/blob/master/guava.md)
   + Some parts skipped as I felt they are not very useful
   + Some parts skipped as I felt they as Im too noob to learn about them
-+ 29 Jun 2014 : Trove : High performance collections
++ 29 Jun 2014 : [Trove : High performance collections](https://github.com/dotslash/OneLibADay/blob/master/trove.md#utils-for-maps-sets)
