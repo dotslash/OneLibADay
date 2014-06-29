@@ -34,3 +34,20 @@ For both Sets and Maps
 boolean retainEntries( TDoubleIntProcedure tDoubleIntProcedure )
 public void compact() //rehash and make the collection compact
 ```
+Custom Hash function
+HashMaps, HashSets can be created with custom hashfucntions. A HashingStrategy object should be created and passed as parameter to the Map/Set contructor.
+HashingStrategy object defines equals and hash function needed for trove hashset
+```java
+final TObjectIntCustomHashMap<String[]> map = 
+        new TObjectIntCustomHashMap<String[]>( new HashingStrategy<String[]>() {
+    @Override
+    public int computeHashCode( String[] array ) {
+        return Arrays.hashCode( array );
+    }
+
+    @Override
+    public boolean equals( String[] ar1, String[] ar2 ) {
+        return Arrays.equals( ar1, ar2 );
+    }
+});
+```
