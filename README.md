@@ -8,8 +8,10 @@ Learn and document about one library a day
   + Some parts skipped as I felt they are not very useful
   + Some parts skipped as I felt they as Im too noob to learn about them
 + 29 Jun 2014 : [Trove : High performance collections](https://github.com/dotslash/OneLibADay/blob/master/trove.md#utils-for-maps-sets)
-+ 30 Jun 2014 : [Apache Commons Compress](#)
++ 30 Jun 2014 : [apache commons email](http://commons.apache.org/proper/commons-email/)
 
 ###To-Do
-+ [apache commons collections](http://commons.apache.org/proper/commons-collections/)
-+ [apache commons email](http://commons.apache.org/proper/commons-email/)
++ [apache commons collections](http://commons.apache.org/proper/commons-collections/)+ 
+
+###Not sure 
++ [Apache Commons Compress](http://commons.apache.org/proper/commons-compress/) : this is non trivial for a novice. Also Im not sure if this is a recommended library
