@@ -11,7 +11,7 @@ Learn and document about one library a day
 + 30 Jun 2014 : [apache commons email](https://github.com/dotslash/OneLibADay/blob/master/email.md)
 
 ###To-Do
-+ [apache commons collections](http://commons.apache.org/proper/commons-collections/)+ 
++ [apache commons collections](http://commons.apache.org/proper/commons-collections/)
 
 ###Not sure 
-+ [Apache Commons Compress](http://commons.apache.org/proper/commons-compress/) : this is non trivial for a novice. Also Im not sure if this is a recommended library
++ [Apache Commons Compress](http://commons.apache.org/proper/commons-compress/) : This is non trivial for a novice. Also Im not sure if this is a recommended library
