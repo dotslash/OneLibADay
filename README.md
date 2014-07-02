@@ -9,6 +9,7 @@ Learn and document about one library a day
   + Some parts skipped as I felt they as Im too noob to learn about them
 + 29 Jun 2014 : [Trove : High performance collections](https://github.com/dotslash/OneLibADay/blob/master/trove.md)
 + 30 Jun 2014 : [apache commons email](https://github.com/dotslash/OneLibADay/blob/master/email.md)
++ 02 Jul 2014 : [java.util.Arrays](#)
 
 ###To-Do
 + [apache commons collections](http://commons.apache.org/proper/commons-collections/)
