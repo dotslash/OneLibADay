@@ -13,11 +13,17 @@ Learn and document about one library a day
 
 
 ###Done but not documented
-+ apache commons lang
-+ apache commons collections
++ [apache commons lang](#)
++ [apache commons collections](http://commons.apache.org/proper/commons-collections/)
 
 ###To-Do
-+ [apache commons collections](http://commons.apache.org/proper/commons-collections/)
++ [apache commons IO](#)
++ [apache log4j](#)
++ [commons csv](http://commons.apache.org/proper/commons-csv/)
++ [commons codec](http://commons.apache.org/proper/commons-codec/)
++ [commons-configuration](http://commons.apache.org/proper/commons-configuration/)
++ comparision between apache commons and guava, whereever applicable
 
 ###Not sure 
 + [Apache Commons Compress](http://commons.apache.org/proper/commons-compress/) : This is non trivial for a novice. Also Im not sure if this is a recommended library
++ [commons dbUtils](http://commons.apache.org/proper/commons-dbutils/examples.html)
