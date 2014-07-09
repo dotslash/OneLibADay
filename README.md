@@ -11,6 +11,11 @@ Learn and document about one library a day
 + 30 Jun 2014 : [apache commons email](https://github.com/dotslash/OneLibADay/blob/master/email.md)
 + 02 Jul 2014 : [Java java.util.Arrays and StringBuffer](https://github.com/dotslash/OneLibADay/blob/master/arrays.md)
 
+
+###Done but not documented
++ apache commons lang
++ apache commons collections
+
 ###To-Do
 + [apache commons collections](http://commons.apache.org/proper/commons-collections/)
 
