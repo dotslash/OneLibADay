@@ -35,14 +35,21 @@ This class more or less does everything you one needs to do with files
 + checksum : returns as a long, the checksum of the file passed a param
 + contentEquals : compare contents of 2 files
 + directoryContains : checks if a dir contains a file
-+ getTempDirectory(), getTempDirectoryPath() : get system temp directory as File/String respectively
-+ getUserDirectory(), getUserDirectoryPath()
++ getTempDirectory, getTempDirectoryPath : get system temp directory as File/String respectively
++ getUserDirectory, getUserDirectoryPath
 + isFileNewer, isFileOlder : check the freshness of file. Freshness can be checked by providing a data object or timelimit in ms
 + sizeOf, sizeOfDirectory : size of File/Directory(recursive)
 + openInputStream, openOutputStream (append/overwrite mode) : takes a file as input and opens it as input/output stream
-+ readFileAsString (encoding charset can be specified): Read the file into a single string
++ readFileAsString (encoding charset can be specified): Read the file into a single string. Not to be used with large files.
 + readLines (encoding charset can be specified) : read file into a list of Strings
 + toFile : converts URL as file (has an array counterpart toFiles)
 
 
 ###IOUtils
+* closeQuietly : Close inputStrem/OutputStrem/Reader/Writer. not much useful from java 8
+* contentEquals : check if content in 2 readers/ input streams is equal
+* copy : takes source, destination, encoding and does the copy (copyLarge for large streams/readers)
+* lineIterator : provides a String iterator for inputStrem/reader. Use readLines to get a List of Strings
+* toByteArray, toCharArray, toInputStream, toString : return to content in stream/reader
+* read, readFully, write , skip, skipFully : functions to read/write/skip reading from/to Streams/Readers/Writers
+* writeLines : write from a Collection of Strings to outputstream/writer
