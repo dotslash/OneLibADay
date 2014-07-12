@@ -55,3 +55,10 @@ This class more or less does everything you one needs to do with files
 * writeLines : write from a Collection of Strings to outputstream/writer
 
 ###Filters
+Many ready to use FileNameFilter, FileFilter implementations for filtering files inside a directory.
+Example
+```java
+File dir = new File(".");
+String[] files = dir.list( CanReadFileFilter.CAN_READ );
+```
+These can be used for copy/move functions in FileUtils for filtering files.
