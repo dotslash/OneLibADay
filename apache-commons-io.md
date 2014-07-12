@@ -17,7 +17,9 @@ Has a simple function to get the free space in file system (takes path as parame
 Has very handy functions for basic checks and opeations on file names (comparing file names of File, getting the file  extension, full path, normalised path etc)
 
 ###FileUtils
-*_Modifying/Creating files_*
+This class more or less does everything you one needs to do with files
+
+**_Modifying/Creating files_**
 + copyDirectory, copyFile : copy dirs/files to a specified destination 
 + copyFileToDirectory, copyUrlToFile, copyInputStreamToFile : similar as above
 + deleteDirectory, forceDelete : delete dir/ file respectively . deleteQuitely can be used if exceptions can be ignored
@@ -26,7 +28,7 @@ Has very handy functions for basic checks and opeations on file names (comparing
 + writeByteArrayToFile, writeStringToFile, writeLines : writing to files 
 + moveDirectory, moveFile, moveFileToDirectory, moveToDirectory : to move files/dirs to specidifed locations
 
-*_Read only info about files_*
+**_Read only info about files_**
 + iterateFiles, iterateFilesAndDirs : to iterate over a files in directory
 + Multipliers for conversion between file sizes (ex, ONE\_GB\_BI, ONE_GB for number of bytes in GB)
 + byteCountToDisplaySize (ex : 1100 -> 1 KB, 1900 -> 1 KB , only integral multiple of sizes are returned)
@@ -41,3 +43,6 @@ Has very handy functions for basic checks and opeations on file names (comparing
 + readFileAsString (encoding charset can be specified): Read the file into a single string
 + readLines (encoding charset can be specified) : read file into a list of Strings
 + toFile : converts URL as file (has an array counterpart toFiles)
+
+
+###IOUtils
