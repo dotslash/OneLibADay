@@ -1,11 +1,11 @@
 Apache commons IO
 ==
-+ [CharSets](#CharSets)
-+ [FileSystemUtils](#FileSystemUtils)
-+ [FileNameUtils](#FileNameUtils)
-+ [FileUtils](#FileUtils)
-+ [IOUtils](#IOUtils)
-+ [Filters](#Filters)
++ [CharSets](#charsets)
++ [FileSystemUtils](#filesystemutils)
++ [FileNameUtils](#filenameutils)
++ [FileUtils](#fileutils)
++ [IOUtils](#ioutils)
++ [Filters](#filters)
 
 ###CharSets
 Same as CharSets provided in guava. Has static references for standard char sets. For general info on charsets read [this](http://www.joelonsoftware.com/articles/Unicode.html)
@@ -53,3 +53,5 @@ This class more or less does everything you one needs to do with files
 * toByteArray, toCharArray, toInputStream, toString : return to content in stream/reader
 * read, readFully, write , skip, skipFully : functions to read/write/skip reading from/to Streams/Readers/Writers
 * writeLines : write from a Collection of Strings to outputstream/writer
+
+###Filters
