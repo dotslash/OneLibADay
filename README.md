@@ -10,6 +10,7 @@ Learn and document about one library a day
 + 29 Jun 2014 : [Trove : High performance collections](https://github.com/dotslash/OneLibADay/blob/master/trove.md)
 + 30 Jun 2014 : [apache commons email](https://github.com/dotslash/OneLibADay/blob/master/email.md)
 + 02 Jul 2014 : [Java java.util.Arrays and StringBuffer](https://github.com/dotslash/OneLibADay/blob/master/arrays.md)
++ 13 Jul 2014 : [apache commons IO](https://github.com/dotslash/OneLibADay/blob/master/apache-commons-io.md)
 
 
 ###Done but not documented
@@ -17,7 +18,6 @@ Learn and document about one library a day
 + [apache commons collections](http://commons.apache.org/proper/commons-collections/)
 
 ###To-Do
-+ [apache commons IO](#)
 + [apache log4j](#)
 + [commons csv](http://commons.apache.org/proper/commons-csv/)
 + [commons codec](http://commons.apache.org/proper/commons-codec/)
