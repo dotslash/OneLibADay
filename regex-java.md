@@ -10,7 +10,7 @@ Java Regular Expressions
 
 ###Syntax
 
-Patterns to match a single character
+####Patterns to match a single character
 
 | <b>pattern</b> | description                                              |
 |----------------|----------------------------------------------------------|
@@ -22,7 +22,7 @@ Patterns to match a single character
 | [a-z&&[^bc]]   | a through z, except for b and c: \[ad-z\] (subtraction)    |
 | [a-z&&[^m-p]]  | a through z, and not m through p: \[a-lq-z\] (subtraction) |
 
-Standard special aliases for character matching
+####Standard special aliases for character matching
 
 |special patterns|description|
 |----|-----|
@@ -34,7 +34,7 @@ Standard special aliases for character matching
 | \w             | A word character: [a-zA-Z_0-9]                           |
 | \W             | A non-word character: [^\w]                              |
 
-Qunatifiers
+####Qunatifiers
 
 |   quantifiers    |  description                   |
 |---|---|
@@ -45,7 +45,7 @@ Qunatifiers
 |X{n,}	|	X, at least n times|
 |X{n,m}	| X, at least n but not more than m times|
 
-Boundary Matchers
+####Boundary Matchers
 
 |Boundary Construct |	Description |
 |---|---|
