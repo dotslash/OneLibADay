@@ -72,8 +72,13 @@ Capturing groups are numbered by counting their opening parentheses from left to
 The entire sequence is considered as match #0. Patters inside a (?..) are not captured
 
 ###Searching Matches
-group, start, end are the functions to look for. Here is an example.
 
++ lookingAt(): Attempts to match the input sequence, starting at the beginning of the region, against the pattern.
++ matches(): Attempts to match the entire region against the pattern.
++ find(): Attempts to find the next subsequence of the input sequence that matches the pattern.
++ find(int start): Resets this matcher and then attempts to find the next subsequence of the input sequence that matches the pattern, starting at the specified index.
+
+group, start, end are the other important functions to look for. Here is an example.
 ```java
 public static void patterns() {
     Pattern pattern = Pattern.compile("(a+)(?!a)b(b)");
@@ -102,5 +107,27 @@ group number: 0 match: abb start: 6 end: 9
 group number: 1 match: a start: 6 end: 7
 group number: 2 match: b start: 8 end: 9
 ```
-```
 
+###Replace
++ matcher.replaceAll : returns a new string replacing all the matches with the replacement string
++ matcher.replaceFirst : returns a new string replacing first the matches with the replacement string
+
+String class too has equivalent functions which do the same. 
+
+####Using patterns in replace
+
+The $ symbol can be used to reference pattern matches. Here is an example
+```java
+public static void dateFormat() {
+    String dateYMD = "2014-06-30";
+    Matcher matcher = Pattern.compile("(\\d{4})-(\\d{2})-(\\d{2})").matcher(dateYMD);
+    String dateDMY = matcher.replaceAll("$3-$2-$1");
+    String dateMDY = dateYMD.replace("(\\d{4})-(\\d{2})-(\\d{2})","$2-$1-$3");
+    System.out.printf("dateDMY : %s\ndateMDY : %s\n", dateDMY, dateMDY);
+}
+```
+Out put will be as follows
+```
+dateDMY : 30-06-2014
+dateMDY : 2014-06-30
+```
