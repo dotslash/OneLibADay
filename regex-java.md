@@ -45,6 +45,7 @@ Java Regular Expressions
 |X{n}	  |	X, exactly n times|
 |X{n,}	|	X, at least n times|
 |X{n,m}	| X, at least n but not more than m times|
+|(?!X) | is the pattern before the present point(look behind)|
 
 ####Boundary Matchers
 
@@ -67,3 +68,39 @@ Capturing groups are numbered by counting their opening parentheses from left to
 2. (A)
 3. (B(C))
 4. (C)
+
+The entire sequence is considered as match #0. Patters inside a (?..) are not captured
+
+###Searching Matches
+group, start, end are the functions to look for. Here is an example.
+
+```java
+public static void patterns() {
+    Pattern pattern = Pattern.compile("(a+)(?!a)b(b)");
+    Matcher matcher = pattern.matcher("aaabbbabb");
+    while (matcher.find()) {
+        System.out.println(matcher.group());
+        for (int i = 0; i <= matcher.groupCount(); i++) {
+            System.out.printf("group number: %d match: %s start: %d end: %d\n", 
+                    i, matcher.group(i), 
+                    matcher.start(i), matcher.end(i));
+        }
+        System.out.println();
+    }
+}
+```
+The output is as follows
+
+```
+aaabb
+group number: 0 match: aaabb start: 0 end: 5
+group number: 1 match: aaa start: 0 end: 3
+group number: 2 match: b start: 4 end: 5
+
+abb
+group number: 0 match: abb start: 6 end: 9
+group number: 1 match: a start: 6 end: 7
+group number: 2 match: b start: 8 end: 9
+```
+```
+
