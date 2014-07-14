@@ -16,13 +16,18 @@ Learn and document about one library a day
 ###Done but not documented
 + [apache commons lang](#)
 + [apache commons collections](http://commons.apache.org/proper/commons-collections/)
++ java collections
+
 
 ###To-Do
 + [apache log4j](#)
 + [commons csv](http://commons.apache.org/proper/commons-csv/)
 + [commons codec](http://commons.apache.org/proper/commons-codec/)
 + [commons-configuration](http://commons.apache.org/proper/commons-configuration/)
-+ comparision between apache commons and guava, whereever applicable
++ comparision between java collections, apache commons and guava, whereever applicable
++ most common exceptions in java
++ java annotations
++ java regexp
 
 ###Not sure 
 + [Apache Commons Compress](http://commons.apache.org/proper/commons-compress/) : This is non trivial for a novice. Also Im not sure if this is a recommended library
