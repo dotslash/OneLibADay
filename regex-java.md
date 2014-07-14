@@ -9,6 +9,9 @@ Java Regular Expressions
 + ```Matcher``` : interprets the pattern and performs match operations against an input string. Matcher object  can be obtained by invoking the matcher method on a Pattern object.
 
 ###Syntax
+
+Patterns to match a single character
+
 | <b>pattern</b> | description                                              |
 |----------------|----------------------------------------------------------|
 | [abc]        | a, b, or c (simple class)                                |
@@ -18,6 +21,8 @@ Java Regular Expressions
 | [a-z&&[def]]   | d, e, or f (intersection)                                |
 | [a-z&&[^bc]]   | a through z, except for b and c: \[ad-z\] (subtraction)    |
 | [a-z&&[^m-p]]  | a through z, and not m through p: \[a-lq-z\] (subtraction) |
+
+Standard special aliases for character matching
 
 |special patterns|description|
 |----|-----|
@@ -29,6 +34,8 @@ Java Regular Expressions
 | \w             | A word character: [a-zA-Z_0-9]                           |
 | \W             | A non-word character: [^\w]                              |
 
+Qunatifiers
+
 |   quantifiers    |  description                   |
 |---|---|
 |X?	    | once or not at all|
@@ -38,6 +45,7 @@ Java Regular Expressions
 |X{n,}	|	X, at least n times|
 |X{n,m}	| X, at least n but not more than m times|
 
+Boundary Matchers
 
 |Boundary Construct |	Description |
 |---|---|
