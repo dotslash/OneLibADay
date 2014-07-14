@@ -11,6 +11,7 @@ Learn and document about one library a day
 + 30 Jun 2014 : [apache commons email](https://github.com/dotslash/OneLibADay/blob/master/email.md)
 + 02 Jul 2014 : [Java java.util.Arrays and StringBuffer](https://github.com/dotslash/OneLibADay/blob/master/arrays.md)
 + 13 Jul 2014 : [apache commons IO](https://github.com/dotslash/OneLibADay/blob/master/apache-commons-io.md)
++ 13 Jul 2014 : [java regexp](https://github.com/dotslash/OneLibADay/blob/master/regex-java.md)
 
 
 ###Done but not documented
@@ -27,7 +28,6 @@ Learn and document about one library a day
 + comparision between java collections, apache commons and guava, whereever applicable
 + most common exceptions in java
 + java annotations
-+ java regexp
 
 ###Not sure 
 + [Apache Commons Compress](http://commons.apache.org/proper/commons-compress/) : This is non trivial for a novice. Also Im not sure if this is a recommended library
