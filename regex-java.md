@@ -62,6 +62,7 @@ Java Regular Expressions
 
 ###Capturing Patterns
 Capturing groups are numbered by counting their opening parentheses from left to right. In the expression ((A)(B(C))), for example, there are four such groups:
+
 1. ((A)(B(C)))
 2. (A)
 3. (B(C))
