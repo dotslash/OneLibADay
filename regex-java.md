@@ -18,6 +18,9 @@ Java Regular Expressions
 | [a-z&&[def]]   | d, e, or f (intersection)                                |
 | [a-z&&[^bc]]   | a through z, except for b and c: \[ad-z\] (subtraction)    |
 | [a-z&&[^m-p]]  | a through z, and not m through p: \[a-lq-z\] (subtraction) |
+
+|special patterns|description|
+|----|-----|
 | .              | Any character (may or may not match line terminators)    |
 | \d             | A digit: [0-9]                                           |
 | \D             | A non-digit: [^0-9]                                      |
@@ -25,3 +28,26 @@ Java Regular Expressions
 | \S             | A non-whitespace character: [^\s]                        |
 | \w             | A word character: [a-zA-Z_0-9]                           |
 | \W             | A non-word character: [^\w]                              |
+
+|   quantifiers    |  description                   |
+|---|---|
+|X?	    | once or not at all|
+|X*	    | zero or more times|
+|X+	    | one or more times|
+|X{n}	  |	X, exactly n times|
+|X{n,}	|	X, at least n times|
+|X{n,m}	| X, at least n but not more than m times|
+
+
+|Boundary Construct |	Description |
+|---|---|
+|^	| The beginning of a line|
+|$	| The end of a line|
+|\b	| A word boundary|
+|\B	| A non-word boundary|
+|\A	| The beginning of the input|
+|\G	| The end of the previous match|
+|\Z	| The end of the input but for the final terminator, if any|
+|\z	| The end of the input|
+
+
