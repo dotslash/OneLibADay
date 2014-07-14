@@ -7,6 +7,7 @@ Java Regular Expressions
 + [Searching Matches](#searching-matches)
 + [Replace](#replace)
   + [Using patterns in replace](#using-patterns-in-replace)
++ [Lesson on Regular Expressions by Oracle](http://docs.oracle.com/javase/tutorial/essential/regex/index.html)
 
 ### Basics
 + ```Pattern``` : a compiled representation of a regular expression. To create a pattern, you must first invoke one of its public static compile methods, which will then return a Pattern object.
