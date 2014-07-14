@@ -3,6 +3,7 @@ Java Regular Expressions
 
 + [Basics](#basics)
 + [Syntax](#syntax)
++ [Capturing Patterns](#capturing-patterns)
 
 ### Basics
 + ```Pattern``` : a compiled representation of a regular expression. To create a pattern, you must first invoke one of its public static compile methods, which will then return a Pattern object.
@@ -59,3 +60,9 @@ Java Regular Expressions
 |\z	| The end of the input|
 
 
+###Capturing Patterns
+Capturing groups are numbered by counting their opening parentheses from left to right. In the expression ((A)(B(C))), for example, there are four such groups:
+1. ((A)(B(C)))
+2. (A)
+3. (B(C))
+4. (C)
