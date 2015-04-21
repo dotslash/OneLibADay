@@ -1,6 +1,6 @@
-OneLibADay
+OneLibADay 
 ==========
-Learn and document about one library a day
+Learn and document about one library a day. I learnt something, but an overall disaster as one lib per day is way too ambitious :(
 
 ###Completed
 * 27 Jun 2014 : [Apache Commons CLI](https://github.com/dotslash/OneLibADay/blob/master/apache-commons-cli.md)
