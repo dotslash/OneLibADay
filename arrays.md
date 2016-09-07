@@ -12,8 +12,8 @@
 + fill : fill the specified elements of the array with specified value
 + sort : as in the case of binarySearch, comparator cannot be used for primitives
 
-###StringBuffer
-Java Strings are immutable. For buliding strings, ```StringBuffer``` and ```StringBuilder``` classes can be used. However StringBuilder should not be used unless, thread safety is required.
+###StringBuilder
+Java Strings are immutable. For buliding strings, ```StringBuffer``` and ```StringBuilder``` classes can be used. However StringBuffer should not be used unless, thread safety is required.
 
 ###Sources
 [Arrays util](http://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html)
