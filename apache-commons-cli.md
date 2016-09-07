@@ -5,7 +5,7 @@ Options object is required for defining the command line arguments and parser pr
 ###Options
 
 Options can be seen as a list of Option objects. Each Option defines a command line option. 
-Example: in ls -l -h  "-l" and "-h" is an Option.
+Example: in ls -l -h,  "-l" and "-h" are Options.
 
 ###Defining an Option
 
